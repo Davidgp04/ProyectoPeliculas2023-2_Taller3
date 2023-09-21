@@ -23,7 +23,7 @@ print(movies[idx_movie])
 #Se hace la conexión con la API de generación de imágenes. El prompt en este caso es:
 #Alguna escena de la película + "nombre de la película"
 response = openai.Image.create(
-  prompt=f"Alguna escena de la película {movies[np.random.randint(idx_movie)]['title']}",
+  prompt=f"Alguna escena de la película {movies[np.random.randint(idx_movie)]['title']} teniendo en cuenta esta descripción  {movies[np.random.randint(idx_movie)]['description']} ",
   n=1,
   size="256x256"
 )
