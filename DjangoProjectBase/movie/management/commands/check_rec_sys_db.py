@@ -19,7 +19,7 @@ class Command(BaseCommand):
         
         items = Movie.objects.all()
 
-        req = "película de la segunda guerra mundial"
+        req = "película de superheroes"
         emb_req = get_embedding(req,engine='text-embedding-ada-002')
 
         sim = []
